@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FreeAgentsModelStoreContainer" CdmEntityContainer="FreeAgentsEntities">
+    <EntitySetMapping Name="Free_Agents">
+      <EntityTypeMapping TypeName="FreeAgentsModel.Free_Agent">
+        <MappingFragment StoreEntitySet="Free Agents">
+          <ScalarProperty Name="DolPerWar" ColumnName="DolPerWar" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pos" ColumnName="Pos" />
+          <ScalarProperty Name="Prev_Team" ColumnName="Prev_Team" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Prev_WAR" ColumnName="Prev_WAR" />
+          <ScalarProperty Name="Proj_WAR" ColumnName="Proj_WAR" />
+          <ScalarProperty Name="Avg_Years" ColumnName="Avg_Years" />
+          <ScalarProperty Name="Avg_Total" ColumnName="Avg_Total" />
+          <ScalarProperty Name="Med_Years" ColumnName="Med_Years" />
+          <ScalarProperty Name="Med_Total" ColumnName="Med_Total" />
+          <ScalarProperty Name="QO" ColumnName="QO" />
+          <ScalarProperty Name="Signing_Team" ColumnName="Signing_Team" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Years" ColumnName="Years" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="column_16" ColumnName="column_16" />
+          <ScalarProperty Name="playerid" ColumnName="playerid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

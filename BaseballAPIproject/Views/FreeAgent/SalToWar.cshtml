@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BaseballAPIproject.Models.Free_Agent>
+@{
+    ViewBag.Title = "SalToWar";
+}
+
+<h2>Dollar's to WAR calculator</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Player Name
+        </th> 
+       
+        <th>
+            Salary
+        </th>  
+        
+        <th>
+            Previous War
+        </th>
+
+        <th>
+            Dollar Per Win
+        </th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.PlayerList.Count; i++)
+    {
+    <tr>
+        <td>
+            @ViewBag.PlayerList[i].Name
+
+        </td>
+
+        @if (ViewBag.PlayerList[i].Salary == null)
+        {
+            <td>Player has not signed</td>
+        }
+        else
+        {
+            <td>
+                @ViewBag.PlayerList[i].Salary
+
+            </td>
+        }
+
+        <td>
+            @Math.Round(ViewBag.PlayerList[i].Prev_WAR, 1)
+        </td>
+
+        <td>
+            @Math.Round(ViewBag.PlayerList[i].DolPerWar, 1)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Players Stats", "../Home/PlayerData", new { Search=ViewBag.PlayerList[i].Name})
+        </td>
+
+     </tr>
+    }
+</table>

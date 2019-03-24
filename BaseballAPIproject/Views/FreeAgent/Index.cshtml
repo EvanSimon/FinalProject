@@ -1,0 +1,94 @@
+﻿@model IEnumerable<BaseballAPIproject.Models.Free_Agent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prev_Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prev_WAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proj_WAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Avg_Years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Med_Years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signing_Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prev_Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prev_WAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proj_WAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Avg_Years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Med_Years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Signing_Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FreeAgentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Free Agents">
+    <Key>
+      <PropertyRef Name="playerid" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pos" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prev_Team" Type="nvarchar" MaxLength="50" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Prev_WAR" Type="float" />
+    <Property Name="Proj_WAR" Type="float" />
+    <Property Name="Avg_Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Avg_Total" Type="float" Nullable="false" />
+    <Property Name="Med_Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Med_Total" Type="float" Nullable="false" />
+    <Property Name="QO" Type="nvarchar" MaxLength="50" />
+    <Property Name="Signing_Team" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="nvarchar" MaxLength="50" />
+    <Property Name="Years" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+    <Property Name="column_16" Type="nvarchar" MaxLength="1" />
+    <Property Name="playerid" Type="int" Nullable="false" />
+    <Property Name="DolPerWar" Type="float" />
+  </EntityType>
+  <EntityContainer Name="FreeAgentsModelStoreContainer">
+    <EntitySet Name="Free Agents" EntityType="Self.Free Agents" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

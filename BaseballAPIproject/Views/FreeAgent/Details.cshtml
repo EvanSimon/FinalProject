@@ -1,0 +1,111 @@
+﻿@model BaseballAPIproject.Models.Free_Agent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Free_Agent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prev_Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prev_Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prev_WAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prev_WAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proj_WAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proj_WAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Avg_Years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Avg_Years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Med_Years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Med_Years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Signing_Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Signing_Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Years)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.column_16)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.column_16)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

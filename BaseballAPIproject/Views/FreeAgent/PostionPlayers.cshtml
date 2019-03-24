@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BaseballAPIproject.Models.Free_Agent>
+
+<h2>Postion Players</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prev_Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prev_WAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proj_WAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Signing_Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.Postion)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Pos
+            </td>
+            <td>
+                @item.Prev_Team
+            </td>
+            <td>
+                @item.Age
+            </td>
+            <td>
+                @item.Prev_WAR
+            </td>
+            <td>
+                @item.Proj_WAR
+            </td>
+            <td>
+                @item.QO
+            </td>
+            <td>
+                @item.Signing_Team
+            </td>
+            <td>
+                @item.Date
+            </td>
+            <td>
+                @item.Years
+            </td>
+            <td>
+                @item.Salary
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+<h2>Search</h2>
+
+@if (ViewBag.Error != null)
+{
+    <h3> @ViewBag.Error</h3>
+}
+<form action="~/Home/PlayerData" method="get">
+    @*change from get to post later*@
+    <input type="text" name="Search" placeholder="Search" class="form-control" /><br />
+    <input type="submit" name="Search" class="btn-sm" />
+</form>
+
+

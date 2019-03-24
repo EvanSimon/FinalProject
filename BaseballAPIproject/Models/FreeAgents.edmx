@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FreeAgentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Free Agents">
+          <Key>
+            <PropertyRef Name="playerid" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pos" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Prev_Team" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Prev_WAR" Type="float" />
+          <Property Name="Proj_WAR" Type="float" />
+          <Property Name="Avg_Years" Type="nvarchar" MaxLength="50" />
+          <Property Name="Avg_Total" Type="float" Nullable="false" />
+          <Property Name="Med_Years" Type="nvarchar" MaxLength="50" />
+          <Property Name="Med_Total" Type="float" Nullable="false" />
+          <Property Name="QO" Type="nvarchar" MaxLength="50" />
+          <Property Name="Signing_Team" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Years" Type="nvarchar" MaxLength="50" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+          <Property Name="column_16" Type="nvarchar" MaxLength="1" />
+          <Property Name="playerid" Type="int" Nullable="false" />
+          <Property Name="DolPerWar" Type="float" />
+        </EntityType>
+        <EntityContainer Name="FreeAgentsModelStoreContainer">
+          <EntitySet Name="Free Agents" EntityType="Self.Free Agents" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FreeAgentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Free_Agent">
+          <Key>
+            <PropertyRef Name="playerid" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prev_Team" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Prev_WAR" Type="Double" />
+          <Property Name="Proj_WAR" Type="Double" />
+          <Property Name="Avg_Years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Avg_Total" Type="Double" Nullable="false" />
+          <Property Name="Med_Years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Med_Total" Type="Double" Nullable="false" />
+          <Property Name="QO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Signing_Team" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="column_16" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="playerid" Type="Int32" Nullable="false" />
+          <Property Name="DolPerWar" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="FreeAgentsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Free_Agents" EntityType="Self.Free_Agent" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FreeAgentsModelStoreContainer" CdmEntityContainer="FreeAgentsEntities">
+          <EntitySetMapping Name="Free_Agents">
+            <EntityTypeMapping TypeName="FreeAgentsModel.Free_Agent">
+              <MappingFragment StoreEntitySet="Free Agents">
+                <ScalarProperty Name="DolPerWar" ColumnName="DolPerWar" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Pos" ColumnName="Pos" />
+                <ScalarProperty Name="Prev_Team" ColumnName="Prev_Team" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Prev_WAR" ColumnName="Prev_WAR" />
+                <ScalarProperty Name="Proj_WAR" ColumnName="Proj_WAR" />
+                <ScalarProperty Name="Avg_Years" ColumnName="Avg_Years" />
+                <ScalarProperty Name="Avg_Total" ColumnName="Avg_Total" />
+                <ScalarProperty Name="Med_Years" ColumnName="Med_Years" />
+                <ScalarProperty Name="Med_Total" ColumnName="Med_Total" />
+                <ScalarProperty Name="QO" ColumnName="QO" />
+                <ScalarProperty Name="Signing_Team" ColumnName="Signing_Team" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Years" ColumnName="Years" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="column_16" ColumnName="column_16" />
+                <ScalarProperty Name="playerid" ColumnName="playerid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

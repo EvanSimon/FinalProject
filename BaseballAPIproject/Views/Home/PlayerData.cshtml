@@ -1,0 +1,43 @@
+﻿
+<h2>Player</h2>
+
+<table class="table">
+
+    @if (ViewBag.BaseballDate.Postion.ToString() != "P" && ViewBag.BaseballDate.Postion.ToString() != "SP" && ViewBag.BaseballDate.Postion.ToString() != "RP")
+    {
+        <tr>
+            <td>@ViewBag.BaseballDate.FirstName @ViewBag.BaseballDate.LastName</td>
+        </tr>
+        <tr>
+            <td>Plate Appearances: @ViewBag.BaseballDate.PA</td>
+        </tr>
+        <tr>
+            <td>Batting Average: @ViewBag.BaseballDate.AVG</td>
+        </tr>
+        <tr>
+            <td>Slugging: @ViewBag.BaseballDate.SLG</td>
+        </tr>
+        <tr>
+            <td>Batting Average on Balls In Play: @ViewBag.BaseballDate.Babip</td>
+        </tr>
+        <tr>
+            <td>Walks @(ViewBag.BaseballDate.BB / ViewBag.BaseballDate.PA)</td>
+        </tr>
+    }
+    else
+    {
+        <tr>
+            <td>@ViewBag.BaseballDate.FirstName @ViewBag.BaseballDate.LastName</td>
+        </tr>
+
+        <tr>
+            <td>@ViewBag.BaseballDate.ERA</td>
+        </tr>
+
+        <tr>
+            <td>@ViewBag.BaseballDate.IP</td>
+        </tr>
+    }
+
+</table>
+

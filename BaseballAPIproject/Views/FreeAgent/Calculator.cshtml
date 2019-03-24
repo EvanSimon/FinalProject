@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<h2>Dollars to WAR Calculator</h2>
+
+<h3>Enter a player's salary and WAR</h3>
+<form action="~/FreeAgent/Calculator" method="post">
+    @*change from get to post later*@
+    <input type="number" step="0.01" name="UserSal" placeholder="Salary" class="form-control" required/><br />
+    <input type="number" step="0.01" name="UserWar" placeholder="WAR" class="form-control" required/><br />
+    <input type="submit" class="btn-sm" />
+</form>
+
+@if(ViewBag.Answer != null)
+{
+    @ViewBag.Answer
+}
